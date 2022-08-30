@@ -77,6 +77,7 @@ class Clock:
             response = requests.post(url=self.xidiandailyup_requests_url, data=self.post_form, cookies=self.session_client, headers=self.headers, verify=False)
             if "操作成功" not in response.text and "您已上报过" not in response.text:
                 print("[!] Fail to clock xidiandailyup")
+                print(response.text)
                 return False
         except:
             print("[!] Fail to clock xidiandailyup")
