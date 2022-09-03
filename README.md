@@ -19,6 +19,8 @@ python clock.py
 
 ## 生成课程表
 
+生成的课程表，可以直接导入到 wake up 课程表中
+
 ```bash
 python courseQuery.py
 ```
