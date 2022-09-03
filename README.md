@@ -1,6 +1,7 @@
 # DailyClock_XDU_version
 
-本项目，只用测试使用，若造成麻烦或者其他问题，概不负责，也请issues联系。
+本项目，只用测试使用。
+若造成麻烦或者其他问题，概不负责，也请issues联系。
 
 ## xidiandailyup_clock
 目前，只写了晨午晚检的打卡
