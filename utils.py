@@ -74,7 +74,7 @@ class Clock:
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54"
         }
         try:
-            response = requests.post(url=self.xidiandailyup_requests_url, data=self.post_form, cookies=self.session_client, headers=self.headers, verify=False, proxies=proxies)
+            response = requests.post(url=self.xidiandailyup_requests_url, data=self.post_form, cookies=self.session_client, headers=self.headers, verify=False)
             if "操作成功" not in response.text and "您已上报过" not in response.text:
                 print("[!] Fail to clock xidiandailyup")
                 print(response.text)
