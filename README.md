@@ -34,4 +34,6 @@ python courseQuery.py
 ```
 ![image](https://user-images.githubusercontent.com/50180586/188258290-95dbf261-a669-44d6-bb04-fbe861d5f22b.png)
 
+课程表导入后
+![image](https://user-images.githubusercontent.com/50180586/188258572-3c0c020a-1067-4b73-b935-115dfcd53335.png)
 
