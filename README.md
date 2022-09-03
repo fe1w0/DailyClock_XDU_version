@@ -22,6 +22,8 @@ python clock.py
 ```bash
 python courseQuery.py
 ```
+![image](https://user-images.githubusercontent.com/50180586/188258290-95dbf261-a669-44d6-bb04-fbe861d5f22b.png)
+
 
 ## xidiandailyup_clock
 目前，只写了晨午晚检的打卡
