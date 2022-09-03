@@ -2,6 +2,26 @@
 
 本项目，只用测试使用。
 若造成麻烦或者其他问题，概不负责，也请issues联系。
+pipreqs .
+# Usage
+
+需要先在`config.py`中设置账户。
+
+## 打卡
+
+```bash
+python clock.py
+```
+推荐crontab，定时打卡
+```bash
+0 7-21/3 * * * /root/miniconda3/bin/python /root/Tools/life/DailyClock_XDU_version/clock.py >> /root/Tools/life/DailyClock_XDU_version/xidiandailyup_log
+```
+
+## 生成课程表
+
+```bash
+python courseQuery.py
+```
 
 ## xidiandailyup_clock
 目前，只写了晨午晚检的打卡
