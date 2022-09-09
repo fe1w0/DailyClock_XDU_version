@@ -1,7 +1,7 @@
 # author: fe1w0
 
-user_id = "22151214335"
-password = "2632338423.."
+user_id = ""
+password = ""
 
 course_KCDM = "X1HA0001"            # 需要抢课的课程代码
 
