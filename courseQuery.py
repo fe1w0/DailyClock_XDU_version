@@ -13,7 +13,7 @@ proxies = {
 }
 
 def regx_lesson(tmp_course_item):
-    pattern = re.compile(r'\[(\d)-(\d+)节\]')
+    pattern = re.compile(r'\[(\d+)-(\d+)节\]')
     start_lesson, end_lesson = pattern.findall(tmp_course_item)[0]
     return start_lesson, end_lesson
 
@@ -105,11 +105,13 @@ courses = json.loads(course_response.text)["xkjgList"]
 tmp_wakeup_course_list = []
 
 for course in courses:
-    if "PKSJDD" in course:
+    # 修改课程季节，修改查询条件就行，如下面查询条件，改为2022秋，即2022秋的个人课程表
+    if "PKSJDD" in course and course['XNXQMC'] == '2023春':
         # 课程名称	星期	开始节数	结束节数	老师	地点	周数
-        tmp_wakeup_course_list.append({"课程名称": course["KCMC"], "PKSJDD": course["PKSJDD"], "老师": course["RKJS"]})
+        tmp_wakeup_course_list.append({"课程名称": "(" + course['XQMC'] + ")" + course["KCMC"], "PKSJDD": course["PKSJDD"], "老师": course["RKJS"]})
 wakeup_course_list =  parse_PKSJDD(tmp_wakeup_course_list)
 print(wakeup_course_list)
+
 dict_info = ["课程名称", "星期", "开始节数", "结束节数", "老师", "地点", "周数"]
 
 with open('course.csv', 'w') as csvfile:
